@@ -1,19 +1,32 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Dashboard\{
+    ProductController,
+    CategoryController,
+    CustomerController,
+    OrderController,
+    PosController,
+};
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+Route::middleware('auth:sanctum')->group(function () {
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    // Products
+    Route::apiResource('products', ProductController::class)->only(['index', 'show']);
+
+    // Categories
+    Route::apiResource('categories', CategoryController::class)->only(['index']);
+
+    // Customers
+    Route::apiResource('customers', CustomerController::class)->only(['index', 'store', 'show']);
+
+    // POS Cart (session-based or request-based cart actions)
+    Route::post('pos/cart/add', [PosController::class, 'addCart']);
+    Route::put('pos/cart/update/{rowId}', [PosController::class, 'updateCart']);
+    Route::delete('pos/cart/remove/{rowId}', [PosController::class, 'removeCart']);
+    Route::post('pos/checkout', [PosController::class, 'checkout']);
+
+    // Orders
+    Route::get('orders', [OrderController::class, 'index']);
+    Route::get('orders/{id}', [OrderController::class, 'show']);
 });
