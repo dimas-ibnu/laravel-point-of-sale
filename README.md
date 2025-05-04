@@ -33,7 +33,7 @@ A simple and powerful Point of Sale (POS) management system with invoice generat
 To get started, clone or download the repository:
 
 ```bash
-git clone https://github.com/fajarghifar/laravel-point-of-sale
+git clone https://github.com/dimas-ibnu/laravel-point-of-sale
 ```
 
 #### 2. Set Up the Project
@@ -154,4 +154,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-> Connect with me on [GitHub](https://github.com/fajarghifar) &nbsp;&middot;&nbsp; [YouTube](https://www.youtube.com/@fajarghifar) &nbsp;&middot;&nbsp; [Instagram](https://instagram.com/fajarghifar) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/fajarghifar/)
+> Connect with main Author [GitHub](https://github.com/fajarghifar) &nbsp;&middot;&nbsp; [YouTube](https://www.youtube.com/@fajarghifar) &nbsp;&middot;&nbsp; [Instagram](https://instagram.com/fajarghifar) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/fajarghifar/)
+> Connect with me [GitHub](https://github.com/dimas-ibnu) &nbsp;&middot;&nbsp; &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/dimas-ibnu-malik/)
